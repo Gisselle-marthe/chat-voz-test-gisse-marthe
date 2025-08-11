@@ -1,0 +1,565 @@
+// ======================
+// POSITION UTILITIES
+// ======================
+
+// Position types
+.static {
+  position: static !important;
+}
+.relative {
+  position: relative !important;
+}
+.absolute {
+  position: absolute !important;
+}
+.fixed {
+  position: fixed !important;
+}
+.sticky {
+  position: sticky !important;
+}
+
+// ======================
+// TOP, RIGHT, BOTTOM, LEFT
+// ======================
+
+// Valores para posicionamiento (sin fracciones problemáticas)
+$position-values: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.25rem,
+  6: 1.5rem,
+  8: 2rem,
+  10: 2.5rem,
+  12: 3rem,
+  16: 4rem,
+  20: 5rem,
+  24: 6rem,
+  auto: auto,
+  full: 100%,
+);
+
+// Valores fraccionarios (con nombres seguros)
+$fractional-position-values: (
+  "half": 50%,
+  "third": 33.333333%,
+  "two-thirds": 66.666667%,
+  "quarter": 25%,
+  "three-quarters": 75%,
+);
+
+// Valores negativos para posicionamiento
+$negative-position-values: (
+  1: -0.25rem,
+  2: -0.5rem,
+  3: -0.75rem,
+  4: -1rem,
+  5: -1.25rem,
+  6: -1.5rem,
+  8: -2rem,
+  10: -2.5rem,
+  12: -3rem,
+  16: -4rem,
+  20: -5rem,
+  24: -6rem,
+  full: -100%,
+);
+
+// Valores fraccionarios negativos
+$negative-fractional-values: (
+  "half": -50%,
+  "third": -33.333333%,
+  "two-thirds": -66.666667%,
+  "quarter": -25%,
+  "three-quarters": -75%,
+);
+
+// TOP utilities
+@each $key, $value in $position-values {
+  .top-#{$key} {
+    top: #{$value} !important;
+  }
+}
+
+// TOP fractional utilities
+@each $key, $value in $fractional-position-values {
+  .top-#{$key} {
+    top: #{$value} !important;
+  }
+}
+
+// TOP negative utilities
+@each $key, $value in $negative-position-values {
+  .-top-#{$key} {
+    top: #{$value} !important;
+  }
+}
+
+// TOP negative fractional utilities
+@each $key, $value in $negative-fractional-values {
+  .-top-#{$key} {
+    top: #{$value} !important;
+  }
+}
+
+// RIGHT utilities
+@each $key, $value in $position-values {
+  .right-#{$key} {
+    right: #{$value} !important;
+  }
+}
+
+// RIGHT fractional utilities
+@each $key, $value in $fractional-position-values {
+  .right-#{$key} {
+    right: #{$value} !important;
+  }
+}
+
+// RIGHT negative utilities
+@each $key, $value in $negative-position-values {
+  .-right-#{$key} {
+    right: #{$value} !important;
+  }
+}
+
+// RIGHT negative fractional utilities
+@each $key, $value in $negative-fractional-values {
+  .-right-#{$key} {
+    right: #{$value} !important;
+  }
+}
+
+// BOTTOM utilities
+@each $key, $value in $position-values {
+  .bottom-#{$key} {
+    bottom: #{$value} !important;
+  }
+}
+
+// BOTTOM fractional utilities
+@each $key, $value in $fractional-position-values {
+  .bottom-#{$key} {
+    bottom: #{$value} !important;
+  }
+}
+
+// BOTTOM negative utilities
+@each $key, $value in $negative-position-values {
+  .-bottom-#{$key} {
+    bottom: #{$value} !important;
+  }
+}
+
+// BOTTOM negative fractional utilities
+@each $key, $value in $negative-fractional-values {
+  .-bottom-#{$key} {
+    bottom: #{$value} !important;
+  }
+}
+
+// LEFT utilities
+@each $key, $value in $position-values {
+  .left-#{$key} {
+    left: #{$value} !important;
+  }
+}
+
+// LEFT fractional utilities
+@each $key, $value in $fractional-position-values {
+  .left-#{$key} {
+    left: #{$value} !important;
+  }
+}
+
+// LEFT negative utilities
+@each $key, $value in $negative-position-values {
+  .-left-#{$key} {
+    left: #{$value} !important;
+  }
+}
+
+// LEFT negative fractional utilities
+@each $key, $value in $negative-fractional-values {
+  .-left-#{$key} {
+    left: #{$value} !important;
+  }
+}
+
+// ======================
+// INSET UTILITIES (combinaciones)
+// ======================
+
+// Inset (todas las direcciones)
+@each $key, $value in $position-values {
+  .inset-#{$key} {
+    top: #{$value} !important;
+    right: #{$value} !important;
+    bottom: #{$value} !important;
+    left: #{$value} !important;
+  }
+}
+
+// Inset fractional
+@each $key, $value in $fractional-position-values {
+  .inset-#{$key} {
+    top: #{$value} !important;
+    right: #{$value} !important;
+    bottom: #{$value} !important;
+    left: #{$value} !important;
+  }
+}
+
+// Inset negative
+@each $key, $value in $negative-position-values {
+  .-inset-#{$key} {
+    top: #{$value} !important;
+    right: #{$value} !important;
+    bottom: #{$value} !important;
+    left: #{$value} !important;
+  }
+}
+
+// Inset negative fractional
+@each $key, $value in $negative-fractional-values {
+  .-inset-#{$key} {
+    top: #{$value} !important;
+    right: #{$value} !important;
+    bottom: #{$value} !important;
+    left: #{$value} !important;
+  }
+}
+
+// Inset X (left y right)
+@each $key, $value in $position-values {
+  .inset-x-#{$key} {
+    left: #{$value} !important;
+    right: #{$value} !important;
+  }
+}
+
+// Inset X fractional
+@each $key, $value in $fractional-position-values {
+  .inset-x-#{$key} {
+    left: #{$value} !important;
+    right: #{$value} !important;
+  }
+}
+
+// Inset X negative
+@each $key, $value in $negative-position-values {
+  .-inset-x-#{$key} {
+    left: #{$value} !important;
+    right: #{$value} !important;
+  }
+}
+
+// Inset X negative fractional
+@each $key, $value in $negative-fractional-values {
+  .-inset-x-#{$key} {
+    left: #{$value} !important;
+    right: #{$value} !important;
+  }
+}
+
+// Inset Y (top y bottom)
+@each $key, $value in $position-values {
+  .inset-y-#{$key} {
+    top: #{$value} !important;
+    bottom: #{$value} !important;
+  }
+}
+
+// Inset Y fractional
+@each $key, $value in $fractional-position-values {
+  .inset-y-#{$key} {
+    top: #{$value} !important;
+    bottom: #{$value} !important;
+  }
+}
+
+// Inset Y negative
+@each $key, $value in $negative-position-values {
+  .-inset-y-#{$key} {
+    top: #{$value} !important;
+    bottom: #{$value} !important;
+  }
+}
+
+// Inset Y negative fractional
+@each $key, $value in $negative-fractional-values {
+  .-inset-y-#{$key} {
+    top: #{$value} !important;
+    bottom: #{$value} !important;
+  }
+}
+
+// ======================
+// Z-INDEX UTILITIES
+// ======================
+
+$z-index-values: (
+  0: 0,
+  1: 1,
+  2: 2,
+  3: 3,
+  4: 4,
+  5: 5,
+  10: 10,
+  20: 20,
+  30: 30,
+  40: 40,
+  50: 50,
+  auto: auto,
+);
+
+@each $key, $value in $z-index-values {
+  .z-#{$key} {
+    z-index: #{$value} !important;
+  }
+}
+
+// Z-index negativos
+.z-neg {
+  z-index: -1 !important;
+}
+.z-neg-10 {
+  z-index: -10 !important;
+}
+
+// ======================
+// TRANSFORM UTILITIES
+// ======================
+
+// Transform utilities básicas
+.transform {
+  transform: var(--tw-transform) !important;
+}
+.transform-none {
+  transform: none !important;
+}
+
+// Translate utilities
+$translate-values: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 0.75rem,
+  4: 1rem,
+  5: 1.25rem,
+  6: 1.5rem,
+  8: 2rem,
+  10: 2.5rem,
+  12: 3rem,
+  16: 4rem,
+  full: 100%,
+);
+
+$translate-fractional-values: (
+  "half": 50%,
+  "third": 33.333333%,
+  "two-thirds": 66.666667%,
+  "quarter": 25%,
+  "three-quarters": 75%,
+);
+
+// Translate X
+@each $key, $value in $translate-values {
+  .translate-x-#{$key} {
+    transform: translateX(#{$value}) !important;
+  }
+}
+
+// Translate X fractional
+@each $key, $value in $translate-fractional-values {
+  .translate-x-#{$key} {
+    transform: translateX(#{$value}) !important;
+  }
+}
+
+// Translate X negative
+@each $key, $value in $translate-values {
+  .-translate-x-#{$key} {
+    transform: translateX(-#{$value}) !important;
+  }
+}
+
+// Translate X negative fractional
+@each $key, $value in $translate-fractional-values {
+  .-translate-x-#{$key} {
+    transform: translateX(-#{$value}) !important;
+  }
+}
+
+// Translate Y
+@each $key, $value in $translate-values {
+  .translate-y-#{$key} {
+    transform: translateY(#{$value}) !important;
+  }
+}
+
+// Translate Y fractional
+@each $key, $value in $translate-fractional-values {
+  .translate-y-#{$key} {
+    transform: translateY(#{$value}) !important;
+  }
+}
+
+// Translate Y negative
+@each $key, $value in $translate-values {
+  .-translate-y-#{$key} {
+    transform: translateY(-#{$value}) !important;
+  }
+}
+
+// Translate Y negative fractional
+@each $key, $value in $translate-fractional-values {
+  .-translate-y-#{$key} {
+    transform: translateY(-#{$value}) !important;
+  }
+}
+
+// ======================
+// UTILIDADES DE CENTRADO COMUNES
+// ======================
+
+// Centrado absoluto
+.center-absolute {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+// Centrado horizontal absoluto
+.center-x-absolute {
+  position: absolute !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+
+// Centrado vertical absoluto
+.center-y-absolute {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+}
+
+// Fixed centrado
+.center-fixed {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+.center-x-fixed {
+  position: fixed !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+}
+// ======================
+// UTILIDADES DE OVERLAY
+// ======================
+
+// Overlay completo
+.overlay {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+// Fixed overlay (para modales)
+.overlay-fixed {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 1000 !important;
+}
+
+// ======================
+// UTILIDADES DE STACKING CONTEXT
+// ======================
+
+// Crear nuevo stacking context
+.isolate {
+  isolation: isolate !important;
+}
+
+// ======================
+// RESPONSIVE UTILITIES
+// ======================
+
+@each $bp-name, $bp-value in $breakpoints {
+  @include respond-to($bp-name) {
+    // Position types
+    .#{$bp-name}\:static {
+      position: static !important;
+    }
+    .#{$bp-name}\:relative {
+      position: relative !important;
+    }
+    .#{$bp-name}\:absolute {
+      position: absolute !important;
+    }
+    .#{$bp-name}\:fixed {
+      position: fixed !important;
+    }
+    .#{$bp-name}\:sticky {
+      position: sticky !important;
+    }
+
+    // Position values
+    @each $key, $value in $position-values {
+      .#{$bp-name}\:top-#{$key} {
+        top: #{$value} !important;
+      }
+      .#{$bp-name}\:right-#{$key} {
+        right: #{$value} !important;
+      }
+      .#{$bp-name}\:bottom-#{$key} {
+        bottom: #{$value} !important;
+      }
+      .#{$bp-name}\:left-#{$key} {
+        left: #{$value} !important;
+      }
+      .#{$bp-name}\:inset-#{$key} {
+        top: #{$value} !important;
+        right: #{$value} !important;
+        bottom: #{$value} !important;
+        left: #{$value} !important;
+      }
+    }
+
+    // Z-index
+    @each $key, $value in $z-index-values {
+      .#{$bp-name}\:z-#{$key} {
+        z-index: #{$value} !important;
+      }
+    }
+
+    // Transforms
+    @each $key, $value in $translate-values {
+      .#{$bp-name}\:translate-x-#{$key} {
+        transform: translateX(#{$value}) !important;
+      }
+      .#{$bp-name}\:translate-y-#{$key} {
+        transform: translateY(#{$value}) !important;
+      }
+    }
+
+    .#{$bp-name}\:center-absolute {
+      position: absolute !important;
+      top: 50% !important;
+      left: 50% !important;
+      transform: translate(-50%, -50%) !important;
+    }
+  }
+}

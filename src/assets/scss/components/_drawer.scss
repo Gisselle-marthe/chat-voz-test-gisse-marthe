@@ -1,0 +1,7 @@
+.c-drawer--fixed {
+  position: fixed !important;
+  top: 0.25rem;
+  right: 0.25rem;
+  height: calc(100vh - 0.5rem);
+  z-index: 1000;
+}

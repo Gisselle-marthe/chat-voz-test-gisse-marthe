@@ -1,0 +1,116 @@
+// Display
+.flex {
+  display: flex !important;
+}
+.inline-flex {
+  display: inline-flex !important;
+}
+
+// Direction
+.flex-row {
+  flex-direction: row !important;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse !important;
+}
+.flex-column {
+  flex-direction: column !important;
+}
+.flex-column-reverse {
+  flex-direction: column-reverse !important;
+}
+
+// Justify content
+.justify-start {
+  justify-content: flex-start !important;
+}
+.justify-end {
+  justify-content: flex-end !important;
+}
+.justify-center {
+  justify-content: center !important;
+}
+.justify-between {
+  justify-content: space-between !important;
+}
+.justify-around {
+  justify-content: space-around !important;
+}
+.justify-evenly {
+  justify-content: space-evenly !important;
+}
+
+// Align items
+.items-start {
+  align-items: flex-start !important;
+}
+.items-end {
+  align-items: flex-end !important;
+}
+.items-center {
+  align-items: center !important;
+}
+.items-baseline {
+  align-items: baseline !important;
+}
+.items-stretch {
+  align-items: stretch !important;
+}
+
+// Flex wrap
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse !important;
+}
+
+// Flex grow/shrink
+.flex-1 {
+  flex: 1 1 0% !important;
+}
+.flex-auto {
+  flex: 1 1 auto !important;
+}
+.flex-none {
+  flex: none !important;
+}
+.flex-grow {
+  flex-grow: 1 !important;
+}
+.flex-shrink {
+  flex-shrink: 1 !important;
+}
+
+// Responsive flexbox
+@each $bp-name, $bp-value in $breakpoints {
+  @include respond-to($bp-name) {
+    .flex-#{$bp-name}-row {
+      flex-direction: row !important;
+    }
+    .flex-#{$bp-name}-column {
+      flex-direction: column !important;
+    }
+    .justify-#{$bp-name}-start {
+      justify-content: flex-start !important;
+    }
+    .justify-#{$bp-name}-center {
+      justify-content: center !important;
+    }
+    .justify-#{$bp-name}-between {
+      justify-content: space-between !important;
+    }
+    .items-#{$bp-name}-start {
+      align-items: flex-start !important;
+    }
+    .items-#{$bp-name}-center {
+      align-items: center !important;
+    }
+    .items-#{$bp-name}-end {
+      align-items: flex-end !important;
+    }
+  }
+}

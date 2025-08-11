@@ -1,0 +1,30 @@
+// Margin
+@include generate-responsive-spacing("margin", "m");
+@include generate-responsive-spacing("margin-top", "mt");
+@include generate-responsive-spacing("margin-right", "mr");
+@include generate-responsive-spacing("margin-bottom", "mb");
+@include generate-responsive-spacing("margin-left", "ml");
+@include generate-responsive-spacing("margin-left margin-right", "mx");
+@include generate-responsive-spacing("margin-top margin-bottom", "my");
+
+// Padding
+@include generate-responsive-spacing("padding", "p");
+@include generate-responsive-spacing("padding-top", "pt");
+@include generate-responsive-spacing("padding-right", "pr");
+@include generate-responsive-spacing("padding-bottom", "pb");
+@include generate-responsive-spacing("padding-left", "pl");
+@include generate-responsive-spacing("padding-left padding-right", "px");
+@include generate-responsive-spacing("padding-top padding-bottom", "py");
+
+// Gap para flexbox y grid
+@each $key, $value in $spacing-values {
+  .gap-#{$key} {
+    gap: #{$value} !important;
+  }
+  .gap-x-#{$key} {
+    column-gap: #{$value} !important;
+  }
+  .gap-y-#{$key} {
+    row-gap: #{$value} !important;
+  }
+}

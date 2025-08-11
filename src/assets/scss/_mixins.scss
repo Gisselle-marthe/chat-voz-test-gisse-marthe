@@ -1,0 +1,31 @@
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint #{$breakpoint} not found in $breakpoints.";
+  }
+}
+
+@mixin generate-spacing($property, $prefix) {
+  @each $key, $value in $spacing-values {
+    .#{$prefix}-#{$key} {
+      #{$property}: #{$value} !important;
+    }
+  }
+}
+
+@mixin generate-responsive-spacing($property, $prefix) {
+  @include generate-spacing($property, $prefix);
+
+  @each $bp-name, $bp-value in $breakpoints {
+    @include respond-to($bp-name) {
+      @each $key, $value in $spacing-values {
+        .#{$prefix}-#{$bp-name}-#{$key} {
+          #{$property}: #{$value} !important;
+        }
+      }
+    }
+  }
+}

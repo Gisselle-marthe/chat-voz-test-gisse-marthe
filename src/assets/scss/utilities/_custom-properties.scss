@@ -1,0 +1,139 @@
+// ======================
+// CUSTOM PROPERTIES UTILITIES
+// ======================
+
+// Utilidad base que usa custom properties
+.top-custom {
+  top: var(--custom-top, 0) !important;
+}
+.right-custom {
+  right: var(--custom-right, 0) !important;
+}
+.bottom-custom {
+  bottom: var(--custom-bottom, 0) !important;
+}
+.left-custom {
+  left: var(--custom-left, 0) !important;
+}
+
+// Para margins y paddings
+.mt-custom {
+  margin-top: var(--custom-margin-top, 0) !important;
+}
+.mr-custom {
+  margin-right: var(--custom-margin-right, 0) !important;
+}
+.mb-custom {
+  margin-bottom: var(--custom-margin-bottom, 0) !important;
+}
+.ml-custom {
+  margin-left: var(--custom-margin-left, 0) !important;
+}
+
+.pt-custom {
+  padding-top: var(--custom-padding-top, 0) !important;
+}
+.pr-custom {
+  padding-right: var(--custom-padding-right, 0) !important;
+}
+.pb-custom {
+  padding-bottom: var(--custom-padding-bottom, 0) !important;
+}
+.pl-custom {
+  padding-left: var(--custom-padding-left, 0) !important;
+}
+
+// Para width y height
+.w-custom {
+  width: var(--custom-width, auto) !important;
+}
+.h-custom {
+  height: var(--custom-height, auto) !important;
+}
+
+// Para font-size
+.text-custom {
+  font-size: var(--custom-font-size, 1rem) !important;
+}
+
+// Para border-radius
+.rounded-custom {
+  border-radius: var(--custom-border-radius, 0) !important;
+}
+
+// Para transforms
+.translate-x-custom {
+  transform: translateX(var(--custom-translate-x, 0)) !important;
+}
+.translate-y-custom {
+  transform: translateY(var(--custom-translate-y, 0)) !important;
+}
+
+// Para z-index
+.z-custom {
+  z-index: var(--custom-z-index, 0) !important;
+}
+
+// Para opacity
+.opacity-custom {
+  opacity: var(--custom-opacity, 1) !important;
+}
+
+// Para line-height
+.leading-custom {
+  line-height: var(--custom-line-height, 1.5) !important;
+}
+
+// Para letter-spacing
+.tracking-custom {
+  letter-spacing: var(--custom-letter-spacing, 0) !important;
+}
+
+// Para shadows
+.shadow-custom {
+  box-shadow: var(--custom-shadow, none) !important;
+}
+
+// Para borders
+.border-custom {
+  border-width: var(--custom-border-width, 1px) !important;
+}
+.border-t-custom {
+  border-top-width: var(--custom-border-top-width, 1px) !important;
+}
+.border-r-custom {
+  border-right-width: var(--custom-border-right-width, 1px) !important;
+}
+.border-b-custom {
+  border-bottom-width: var(--custom-border-bottom-width, 1px) !important;
+}
+.border-l-custom {
+  border-left-width: var(--custom-border-left-width, 1px) !important;
+}
+
+// Para gaps en flexbox/grid
+.gap-custom {
+  gap: var(--custom-gap, 0) !important;
+}
+.gap-x-custom {
+  column-gap: var(--custom-gap-x, 0) !important;
+}
+.gap-y-custom {
+  row-gap: var(--custom-gap-y, 0) !important;
+}
+
+// Para max-width y max-height
+.max-w-custom {
+  max-width: var(--custom-max-width, none) !important;
+}
+.max-h-custom {
+  max-height: var(--custom-max-height, none) !important;
+}
+
+// Para min-width y min-height
+.min-w-custom {
+  min-width: var(--custom-min-width, 0) !important;
+}
+.min-h-custom {
+  min-height: var(--custom-min-height, 0) !important;
+}
